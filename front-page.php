@@ -39,15 +39,16 @@ get_header(); ?>
 		<!-- Banner Section - END -->
 		<div id="aboutStudy" class="container-fluid px-0">
 			<div class="container">
-				<div class="section-head text-center"><h2 class="mainheading">How Does It <span>Work?</span></h2></div>
+				<div class="section-head text-center"><h2 class="mainheading">How Does It <span>Work?</span> <?php the_field('step_heading') ?></h2></div>
 				<div class="row">
 					<div class="col-lg-3 col-sm-6">
 						<div class="img-outer">
 							<div class="img-wrap">
-								<img class="lazypreload lazyloaded" alt="Auto Cruitment" src="<?php echo get_stylesheet_directory_uri(); ?>/images/step-1.png">
+							<img class="lazypreload lazyloaded" alt="Auto Cruitment" src="<?php the_field('step1_image') ?>">
+
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/up-arrow.png" class="uparrow-position">
 							</div>
-							<p>Complete our sign up form, our platform is secure and we will only use your information to match you to a Clinical Trial.</p>								
+							<p><?php the_field('step_1_content') ?></p>								
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6">
