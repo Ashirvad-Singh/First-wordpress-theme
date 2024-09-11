@@ -18,35 +18,33 @@ get_header(); ?>
 
 	<div id="body_section" class="body_section">
 		<!-- Banner Section -->
-		<section id="banner" class="container-fluid px-0 bannercontent">
+		<section id="banner-content" class="container-fluid px-0 bannercontent" style="background-image:url('<?php the_field('banner_background')?>');">
 
-			<div class="banner-text">
-		<h1><?php the_field('banner_heading'); ?></h1>
+    <div class="col-6 banner-text">
+        <h1><?php the_field('banner_heading'); ?></h1>
+        <h2><?php the_field('banner_sub_heading'); ?></h2>
+        <div class="banner-content">
+            <?php the_field('banner_content_list'); ?>
+        </div>
+        <div class="banner-btn">
+            <a href="#signup" class="qualifybtn btnscroll"><?php the_field('banner_button'); ?></a>
+        </div>
+    </div>
+</section>
 
-			
-			
-				<h2>
-<?php the_field('banner_sub_heading');?>
-				</h2>
-</h2>
-				<div class="banner-content">
 
-					<?php the_field('banner_content_list')?>
-				</div>
-				<div class="banner-btn"><a href="#signup" class="qualifybtn btnscroll"><?php the_field('banner_button')?></a></div>
-			</div>
-		</section>
+
 		<!-- Banner Section - END -->
 		<div id="aboutStudy" class="container-fluid px-0">
 			<div class="container">
-				<div class="section-head text-center"><h2 class="mainheading">How Does It <span>Work?</span> <?php the_field('step_heading') ?></h2></div>
+				<div class="section-head text-center"><h2 class="mainheading"> <?php the_field('step_heading') ?></h2></div>
 				<div class="row">
 					<div class="col-lg-3 col-sm-6">
 						<div class="img-outer">
 							<div class="img-wrap">
 							<img class="lazypreload lazyloaded" alt="Auto Cruitment" src="<?php the_field('step1_image') ?>">
 
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/up-arrow.png" class="uparrow-position">
+								<img src="<?php the_field('first_arrow') ?>" class="uparrow-position">
 							</div>
 							<p><?php the_field('step_1_content') ?></p>								
 						</div>
@@ -54,27 +52,27 @@ get_header(); ?>
 					<div class="col-lg-3 col-sm-6">
 						<div class="img-outer">
 							<div class="img-wrap">
-								<img class="lazypreload lazyloaded" alt="Auto Cruitment" src="<?php echo get_stylesheet_directory_uri(); ?>/images/step-2.png">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/down-arrow.png" class="downarrow-position">
+								<img class="lazypreload lazyloaded" alt="Auto Cruitment" src="<?php the_field('step2_image') ?>">
+								<img src="<?php the_field("second_arrow")?>" class="downarrow-position">
 							</div>
-							<p>Our sign up form will ask some questions about your health, this allows us to match you to a Clinical Trial.</p>								
+							<p><?php the_field('step2_content') ?></p>								
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6">
 						<div class="img-outer">
 							<div class="img-wrap">
-								<img class="lazypreload lazyloaded" alt="Auto Cruitment" src="<?php echo get_stylesheet_directory_uri(); ?>/images/step-3.png">
-								<img src="" class="uparrow-position">
+								<img class="lazypreload lazyloaded" alt="Auto Cruitment" src="<?php the_field('step3_image') ?>">
+								
 							</div>
-							<p>We will connect you with a Clinical Trial in your area.</p>
+							<p><?php the_field('step3_content') ?></p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6">
 						<div class="img-outer">
 							<div class="img-wrap">
-								<img class="lazypreload lazyloaded" alt="Auto Cruitment" src="<?php echo get_stylesheet_directory_uri(); ?>/images/step-4.png">
+								<img class="lazypreload lazyloaded" alt="Auto Cruitment" src="<?php the_field('step4_image') ?>">
 							</div>
-							<p>Become one of 100,000 Patients taking part in an AutoCruitment Verified Clinical Trial!</p>
+							<p><?php the_field('step4_content') ?></p>
 						</div>
 					</div>
 
@@ -88,12 +86,12 @@ get_header(); ?>
 			<div class="container">
 				<div class="get-row">
 					<div class="left-cont">
-						<p>Take the next step to see if you qualify for local
-							<span>Teen ADHD Studies.</span></p>
-							<h3>Space is limited!</h3>
+						<p><?php the_field("faq_heading")?></p>
+						
+							<h3><?php the_field("faq_subheading")?></h3>
 						</div>
 						<div class="right-cont">
-							<div class="qualify-red-btn"> <a href="#signup" class="qualifybtn btnscroll">Get Started – Click Here</a></div>
+							<div class="qualify-red-btn"> <a href="#signup" class="qualifybtn btnscroll"><?php the_field("faq_button_text")?></a></div>
 						</div>
 					</div>
 				</div>
@@ -103,17 +101,7 @@ get_header(); ?>
 
 		
 
-			<section id="last-step" class="">
-				<div class="container">
-					<div class="get-row">
-						<div class="left-cont">
-							<p>Thank you for considering participating in a
-								<span>Clinical Trial</span></p>
-								<h3>...and helping to advance medicine.</h3>
-							</div>
-						</div>
-					</div>
-				</section>
+						
 			
 </div>
 
